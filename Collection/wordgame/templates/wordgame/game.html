@@ -1,0 +1,53 @@
+{% extends 'Frontend/base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col 5">
+            <h2>Word</h2>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div id="currentword">{{word}}</div>
+                <input type="text" name="word">
+                <input  class="btn btn-info" type="submit" value="Get Word" name="getword">
+
+            </form>
+            <button class="btn btn-info" onclick="gfg_Run()">Compare</button>
+        </div>
+         <div class="col">
+            <h2>Hint</h2>
+
+
+
+
+                {% for i in values %}
+                <b>{{i}}</b><br>
+                {% endfor %}
+                {{translate}}
+
+            <p id="GFG_DOWN" style="color:green;  font-size: 20px; font-weight: bold;"> </p>
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+        var str1 =  document.getElementById("currentword");
+        var str2 = document.getElementById("word");
+
+        var el_down = document.getElementById("GFG_DOWN");
+
+        function gfg_Run() {
+            var a = str1.value;
+            var b = str2.value;
+            var ans = a.localeCompare(b);
+            var res = "";
+            if (ans == 0) {
+                res = res + 1;
+            }
+            el_down.innerHTML = "Hello World";
+
+        }
+    </script>
+
+{% endblock content%}

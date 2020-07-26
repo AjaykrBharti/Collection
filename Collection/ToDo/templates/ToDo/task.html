@@ -1,0 +1,15 @@
+<form method="POST" action="/">
+    {% csrf_token %}
+    {{form.title}}
+    <input type="submit" value="Create Task">
+ </form>
+<p>Tasks</p>
+
+{% for task in tasks %}
+    <div>
+
+        <p>{{task}}</p>
+        <p><a href="{% url 'update' task.id %}">Update</a>
+        <a href="{% url 'delete' task.id %}">Delete</a></p>
+    </div>
+{% endfor %}
