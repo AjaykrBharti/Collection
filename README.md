@@ -16,4 +16,12 @@ Steps to import this in Pycharm:
 5. Click Clone. If you want to create a project based on these sources, click Yes in the confirmation dialog.
 
 
+Command need to execute once you have setup everything in place. Like virtual environment and django has been installed.  
+
+1. Go to requirements.txt file location and execute pip install -r requirements.txt
+   Once you will hit enter it will start installing all the required files.
+   
+2. 
+
+
 
