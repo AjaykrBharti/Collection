@@ -85,21 +85,9 @@ WSGI_APPLICATION = 'Collection.wsgi.application'
 
 
 DATABASES = {
-
-    # pip install django-pyodbc-azure-2019   for more details visit https://pypi.org/project/django-pyodbc-azure-2019/
-    # Above pip is very important to install when you are working with mssql
-    # Then run  python manage.py migrate    'to migrate all the important tables in the database'
-    # These table will create in the database after migration than your application is connected to mssql database
-
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'Practise',
-        'HOST': 'DESKTOP-NDJONLN\SQLNEW',
-        'USER': 'ee',
-        'PASSWORD': 'Pri@1992',
-        'OPTIONS': {
-                    'driver': 'ODBC Driver 17 for SQL Server',
-                },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
