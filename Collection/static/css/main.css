@@ -1,9 +1,10 @@
 body {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 80px;
 }
 
 card:hover {
     background: linear-gradient(135deg,#6394ff 0%,#0a193b 100%);
     color: white;
 }
+

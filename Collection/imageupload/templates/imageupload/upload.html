@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Image Upload</title>
+    <style>
+	.profile-pic{
+		max-width: 200px;
+		max-height:200px;
+		margin: 0 auto;
+		border-radius: 50%;
+	}
+    </style>
 </head>
 <body>
     <form method="POST" action="" enctype="multipart/form-data">
@@ -11,5 +19,8 @@
         {{form.image}}
         <input type="submit" value="upload">
     </form>
+{% for image in images %}
+<img class="profile-pic" src="{{image.image.url}}">
+{% endfor %}
 </body>
 </html>
